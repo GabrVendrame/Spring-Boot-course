@@ -3,6 +3,8 @@ package br.com.gabrvendrame.todolist.user;
 import java.time.LocalDateTime;
 import java.util.UUID;
 
+import org.hibernate.annotations.CreationTimestamp;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -23,6 +25,7 @@ public class UserModel {
     private String name;
     private String password;
 
+    @CreationTimestamp
     private LocalDateTime createdAt;
 
 }
